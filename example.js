@@ -2,7 +2,7 @@
 angular.module('ui-router-example', ['ui.router'])
         .config(function ($stateProvider, $urlRouterProvider) {
 
-            $urlRouterProvider.otherwise('/users');
+            $urlRouterProvider.otherwise('/');
             $stateProvider
                     .state('home', {
                         url: '/',

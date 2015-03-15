@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UI-Router Beispiel</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Bootstrap CSS for Layouting -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+
+        <!-- AngularJS and UI-Router -->
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <!-- Our application file -->
+        <script src="example.js"></script>
+    </head>
+
+    <!-- Apply the angular application to our side -->
+    <body ng-app="ui-router-example">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" ui-sref="home">UI-Router Beispiel</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="users">User</a></li>
+                    <li><a ui-sref="about">About</a></li>
+                </ul>
+                <p ui-view="info" class="navbar-text pull-right"></p>
+            </div>
+        </nav>
+
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Ui-Router uses ui-view instead of ng-view -->
+            <ui-view />
+        </div>
+
+        <div class="text-center">
+            <p>Tutorial: <a href="#">pieperhome.de</a></p>
+            <p>Code: <a href="#">Github</a>
+        </div>
+    </body>
+</html>
